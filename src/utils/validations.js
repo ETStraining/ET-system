@@ -1,39 +1,20 @@
 import Joi from "joi"
 // Validation schema for creating a new user
 const createUserSchema = Joi.object({
-    fname: Joi.string().min(3).max(30).required(),
-    lname: Joi.string().min(3).max(30).required(),
+    name: Joi.string().min(3).max(30).required(),
     email: Joi.string().email().required(),
+    phone:Joi.string().required(),
     password: Joi.string().required().min(3).max(50),
-    img: Joi.string().optional(),
-    role: Joi.string().optional(),
-    status: Joi.string().optional(),
-    about: Joi.string().optional(),
-    history: Joi.string().optional(),
-    identity: Joi.string().optional(),
-    skills: Joi.string().optional(),
-    rating: Joi.string().optional(),
+  
 });
 
 // Validation schema for updating a user
 const updateUserSchema = Joi.object({
     fname: Joi.string().min(3).max(30).optional(),
-    lname: Joi.string().min(3).max(30).optional(),
     email: Joi.string().email().optional(),
     password: Joi.string().min(3).max(50).optional(),
-    img: Joi.string().optional(),
-    role: Joi.string().optional(),
-    status: Joi.string().optional(),
     phone: Joi.string().optional(),
-    province: Joi.string().optional(),
-    district: Joi.string().optional(),
-    sector: Joi.string().optional(),
-    street: Joi.string().optional(),
-    about: Joi.string().optional(),
-    history: Joi.string().optional(),
-    identity: Joi.string().optional(),
-    skills: Joi.string().optional(),
-    rating: Joi.string().optional(),
+    
 });
 
 // Validation schema for user login
