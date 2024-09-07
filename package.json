@@ -4,12 +4,10 @@
   "description": "Mongodb,Express,Nodejs",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./build/src/index.js",
-    "start:dev": "nodemon --exec babel-node ./src/index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build/src/ ./src/ -s",
-    "build": "npm run build-babel"
-  },
+  "start": "nodemon build/src/index.js",
+  "build": "npm run build-babel"
+},
+
   "author": "",
   "license": "MIT",
   "dependencies": {
